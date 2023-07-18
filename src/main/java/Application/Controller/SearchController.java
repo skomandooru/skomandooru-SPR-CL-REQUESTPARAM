@@ -42,7 +42,7 @@ public class SearchController {
         return 0;
     }
     /**
-     * TODO: extract the String 'format' and 'orderby' query parameters from a request, such as
+     * TODO: extract the String 'format' and 'orderBy' query parameters from a request, such as
      * GET localhost:9000/cats?format=gif&orderby=new, returning a String array such as {"gif", "new"}
      */
     @GetMapping(value = "cats", params = {"format", "orderBy"})
