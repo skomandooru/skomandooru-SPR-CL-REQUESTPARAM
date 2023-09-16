@@ -38,15 +38,15 @@ public class SearchController {
      * returning 50.
      */
     @GetMapping(value = "cats", params = {"amount"})
-    public int getSearchFormat(){
-        return 0;
+    public String[] getSearchAmount(@RequestParam int amount) {
+        return new String[]{String.valueOf(amount)};
     }
     /**
      * TODO: extract the String 'format' and 'orderBy' query parameters from a request, such as
      * GET localhost:9000/cats?format=gif&orderby=new, returning a String array such as {"gif", "new"}
      */
     @GetMapping(value = "cats", params = {"format", "orderBy"})
-    public String[] getSearchFormatAndAmount(){
-        return null;
+    public String[] getSearchFormatAndOrderBy(@RequestParam String format, @RequestParam String orderBy) {
+        return new String[]{format, orderBy};
     }
 }
