@@ -38,8 +38,8 @@ public class SearchController {
      * returning 50.
      */
     @GetMapping(value = "cats", params = {"amount"})
-    public String[] getSearchAmount(@RequestParam int amount) {
-        return new String[]{String.valueOf(amount)};
+    public int getSearchAmount(@RequestParam int amount) {
+        return amount;
     }
     /**
      * TODO: extract the String 'format' and 'orderBy' query parameters from a request, such as
